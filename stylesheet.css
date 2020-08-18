@@ -1,0 +1,949 @@
+html{
+/*	background-color: rgba(48,121,24,0.30);*/
+/*	background-image: url("images/space.png");*/
+	background-image: url("images/background.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	margin:0;
+	width: 100%;
+	height: 100%;
+	font-family:Georgia, "Times New Roman", Times, "serif";
+}
+
+body{
+	margin: 0 auto;
+/*
+	background-color: rgba(151,195,161,1.00);
+*/
+	
+}
+
+a{
+	text-decoration: none;
+	color: rgba(0,0,0,1.00);
+}
+
+a:hover{
+	color: rgba(147,147,147,1.00);
+	transition: 0.3s;
+	border-bottom:rgba(108,108,108,1.00) solid 0.2vh; 
+}
+
+
+/*ーーーーーーーーーーーーーーハンバーガーメニューーーーーーーーーーーーーー*/
+
+@media(min-width:280px){
+	li>a{
+		font-family:Georgia, "Times New Roman", Times, "serif";
+		color: rgba(255,255,255,1.00);
+		font-size: 20px;
+	}
+	ul{
+	/*	background-color: rgba(36,95,75,1.00);*/
+		list-style: none;
+		padding: 30px 0 0 0;
+		margin: 0 auto;
+		text-align: center;
+		line-height: 70px;
+	}
+	.close{
+		color: rgba(0,0,0,1.00);
+		text-align: right;
+		padding-top:  20px;
+		padding-right: 20px;
+		font-size: 25px;
+	}
+}
+@media(min-width:900px){
+	li>a{
+		font-family:Georgia, "Times New Roman", Times, "serif";
+		color: rgba(255,255,255,1.00);
+		font-size: 25px;
+	}
+	ul{
+	/*	background-color: rgba(36,95,75,1.00);*/
+		list-style: none;
+		padding: 30px 0 0 0;
+		margin: 0 auto;
+		text-align: center;
+		line-height: 80px;
+	}
+	.close{
+		color: rgba(0,0,0,1.00);
+		text-align: right;
+		padding-top:  30px;
+		padding-right: 30px;
+		font-size: 35px;
+	}
+}
+
+aside{
+/*	background-color: aqua;*/
+	width: 25%;
+	min-width: 150px;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+
+
+
+
+.open,
+.close{
+	display: none;
+}
+input[type="checkbox"]{
+	position: absolute;
+	left: -50vW;
+}
+
+
+
+	.open,
+	.close{
+		display: block;
+	}
+@media(min-width:280px){
+	.side-footer{
+		width: 100%;
+		margin-top: 30px;
+		text-align: center;
+	}
+	.logo-img-shallow{
+		width: 100px;
+		margin:  0 auto;
+	}
+	.open>img{
+		width: 30px;
+		position: fixed;
+		top:30px;
+		right:20px;
+		z-index: 10;
+	}	
+}
+@media(min-width:1100px){
+	.side-footer{
+		width: 100%;
+		margin-top: 40px;
+		text-align: center;
+	}
+	.logo-img-shallow{
+		width: 250px;
+		margin:  0 auto;
+	}
+	.open>img{
+		width: 50px;
+		position: fixed;
+		top:50px;
+		right:40px;
+		z-index: 10;
+	}	
+}
+
+	
+	.open>img,.close:hover{
+		cursor: pointer;
+	}
+	aside{
+		position: absolute;
+		left: -90vw;
+		height: 130vh;
+		transition: all 0.2s ease-in;
+		background: rgba(99,99,99,1.00);
+	}
+	input[type="checkbox"]:checked ~ aside{
+		left: 0;
+	}
+	input[type="checkbox"]:checked ~ main{
+		display: none;
+	}
+	input[type="checkbox"]:checked ~ .open>img{
+		z-index: 0;
+	}
+	input[type="checkbox"]:checked ~ .back{
+		position:absolute;
+		width: 100%;
+		height: 130vh;
+		background-color: rgba(0,0,0,0.60) !important;
+	}
+
+
+/*ーーーーーーーーーーーーーーハンバーガーメニューーーーーーーーーーーーーー*/
+
+
+
+
+
+/*ヘッダータイトル*/
+
+.header{
+/*	background-color: rgba(167,55,57,0.3);*/
+/*	background-image: url("images/is.png");*/
+	background-attachment: fixed;
+	background-size: cover;
+	opacity: 0.8;
+	width: 100%;
+}
+
+@media(min-width:280px){
+	.header{
+		height: 110px;
+	}
+	.logo-img{
+		width:60px;
+		position: relative;
+		position: absolute;
+		top: 25px;
+		left: 15px;
+	}
+}
+
+@media(min-width:1100px){
+	.header{
+		height: 140px;
+	}
+	.logo-img{
+		width:90px;
+		position: relative;
+		position: absolute;
+		top: 35px;
+		left: 25px;
+	}
+}
+
+
+
+.header-top{
+/*	background-color: rgba(16,55,57,0.3);*/
+	width:100%;
+	height: 14vh;
+	text-align: center;
+	display: flex;
+	position: fixed;
+}
+
+.logo{
+	flex: 1;
+}
+
+
+
+
+/*トップタイトル、コメント*/
+.top-containar{
+/*	background-color: rgba(27,13,132,0.30);*/
+	width: 100%;
+	height: 250px;
+	padding: 30px 0 0 0;
+	margin: 0;
+}
+
+
+
+.side-bar>ul{
+/*	background-color: aqua;*/
+	list-style: none;
+	font-weight: bold;
+}
+
+
+.main-bar{
+/*	background-color: rgba(208,155,157,0.30);*/
+	flex: 5;
+	padding: 0px 0 0 0;
+	height: 250px;
+	color: rgba(12,12,12,1.00);
+	font-size: 30px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, "serif";
+	text-shadow: 2px 2px 7px white;
+}
+
+.main-bar-container{
+/*	background-color: brown;*/
+	text-align: center;
+}.main-bar-container>p{
+/*	background-color: brown;*/
+	padding-top: 90px;
+}
+.main-bar-container>p{
+	font-size: 2.5vw;
+	line-height: 0px;
+}
+.main-comment2{
+	padding-top: 0px;
+	text-align: center;
+}
+
+
+@media(min-width:280px){
+	.main-comment2{
+		font-size: 40px;
+	}
+	.main-comment21>img{
+	/*	background-color: blue;*/
+		width: 300px;
+		line-height: 0;
+	}
+}
+@media(min-width:1100px){
+	.main-comment2{
+		font-size: 60px;
+	}
+	.main-comment21>img{
+	/*	background-color: blue;*/
+		width: 450px;
+		line-height: 0;
+	}
+}
+
+
+.main-comment2>img{
+/*	background-color: blue;*/
+	width: 50%;
+	line-height: 0;
+}
+
+.main-comment21{
+	padding-top: 0;
+	text-align: center;
+/*	font-size: 80px;*/
+}
+
+
+
+.return{
+	background-color: rgba(137,164,130,0.50);
+	border-radius: 5px;
+	padding:10px;
+	margin-left: -180px;
+	position:fixed;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+/*コラム各種*/
+.main{
+	display: flex;
+	margin: 0 auto;
+	width:70vw;
+	height:100%;
+	background-attachment: fixed;
+/*	background-color: rgba(151,195,161,0.5);*/
+}
+
+
+.main-comment>p{
+	font-size: 15px;
+}
+
+
+.Simulate-plan{
+	padding: 10px 0;
+	background-color: rgba(31,165,118,0.20);
+	border-bottom:rgba(3,59,12,1.00) solid 8px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	
+}
+.Food-menu{
+	padding: 10px 0;
+	background-color: rgba(31,165,118,0.20);
+	border-bottom:rgba(3,59,12,1.00) solid 8px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+}
+.Infomation{
+	padding: 10px 0;
+/*
+	background-color: rgba(31,165,118,0.20);
+*/
+
+}
+.Reserve{
+	padding: 10px 0;
+	font-size: 3vw;
+/*
+	background-color: rgba(31,165,118,0.20);
+
+*/
+
+}
+.Access{
+	padding: 10px 0;
+/*
+	background-color: rgba(31,165,118,0.20);
+	border-bottom:rgba(3,59,12,1.00) solid 8px;
+	border-radius: 20px;
+*/
+
+}
+
+/*バーチャルゴルフとは？*/
+
+.main-head1{
+/*	background-color: aquamarine;*/
+	text-align: center;
+	
+}
+
+.p{
+	display:  flex;
+	text-align: center;
+	width: 100%;
+}
+
+.ppp>a{
+	border-bottom: black solid 2px;
+}
+
+@media(min-width:280px){
+	.pp{
+		margin: 0 auto;
+		width: 100%;
+		line-height: 30px;
+		padding-top: 25px;
+		color: black;
+		font-size: 15px;
+	}
+	
+	.p{
+		height:280px;
+	}
+	
+	.p>img{
+		margin: 50px auto auto auto;
+		width: 180px;
+		border-radius: 60px;
+	}
+	.main-head1-comment>p{
+/*		background-color:rgba(46,133,22,0.30);*/
+		margin: 0;
+		padding: 0 0 0 0;
+		font-size: 15px;
+		color: rgba(0,0,0,1.00);
+		line-height: 30px;
+	}
+	
+	.main-head1-comment{
+/*		background-color:antiquewhite;*/
+		padding: 30px 0 40px 0;
+	}
+}
+
+@media(min-width:800px){
+	.pp{
+		line-height: 50px;
+		padding-top: 25px;
+		color: black;
+		font-size: 30px;
+	}
+	
+	.p{
+		height:500px;
+	}
+	.p>img{
+		margin: 50px auto auto auto;
+		width: 350px;
+		border-radius: 60px;
+	}
+	
+	.main-head1-comment>p{
+	/*	background-color:rgba(46,133,22,0.30);*/
+		margin: 0;
+		padding: 20px 0 0 0px;
+		font-size: 20px;
+		color: rgba(0,0,0,1.00);
+		line-height: 30px;
+	}
+	
+		.main-head1-comment{
+	/*	background-color:antiquewhite;*/
+		padding: 110px 0 60px 0;
+	}
+}
+
+
+
+
+
+
+
+/*プラン*/
+
+@media(min-width:280px){
+	.plan-table{
+/*		background-color:rgba(46,133,22,0.30);*/
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+		height: 300px;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, "serif";
+		font-size: 10px;
+	}
+	.plan-table>p{
+		font-size: 20px;
+		font-weight: bold;
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+@media(min-width:1100px){
+	.plan-table{
+	/*	background-color:rgba(46,133,22,0.30);*/
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+		height: 400px;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, "serif";
+	}
+	.plan-table>p{
+		font-size: 35px;
+		font-weight: bold;
+		padding: 0;
+		margin: 0 auto;
+	}
+}
+
+
+.weekly>p{
+	color: rgba(0,0,0,1.00);
+	text-shadow: 3px 3px 10px white;
+/*	padding-top: 60px;*/
+}
+
+.weekend>p{
+	color: rgba(58,58,58,1.00);
+	text-shadow: 3px 3px 10px white;
+}
+
+
+@media(min-width:280px){
+	table{
+		padding: 0px;
+		margin: 0 auto;
+		font-size: 12px;
+	}
+}
+@media(min-width:1100px){
+	table{
+		padding: 0px;
+		margin: 0 auto;
+		font-size: 20px;
+	}
+}
+
+.weekly-color{
+	background-color: rgba(205,205,205,1.00);
+}
+.weekend-color{
+	background-color: rgba(209,209,209,1.00);
+}
+
+td,th{
+	padding: 3px 6px 3px 6px;
+}
+th{
+	background-color: rgba(64,64,64,0.10)
+}
+
+
+.main-head2 {
+	padding: 0px 0 100px 0;
+}
+.main-head2-comment{
+/*	background-color:antiquewhite;*/
+/*	display: flex;*/
+	width:100%;
+	margin: 0 auto;
+	padding: 0px 0 100px 0;
+}
+
+.open-close{
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+.a{
+	width: 100px;
+	text-align: center;
+	height: 10px;
+}
+.b{
+	width: 300px;
+	height: 30px;
+
+}
+
+.c{
+	width: 100px;
+	text-align: center;
+	height: 50px;
+	padding-top: 30px;
+}
+.d{
+	padding-top: 30px;
+}
+
+
+
+@media(min-width:280px){
+		.rental{
+/*		background-color: rgba(105,180,115,0.440);*/
+		text-align: center;
+		width: 100%;
+		color: rgba(0,0,0,1.00);
+		margin:  0 auto;
+	}
+
+	.rental-box{
+/*		background-color: chocolate;*/
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.rental-containar1, .rental-containar2{
+/*		background-color: antiquewhite;*/
+		width: 100%;
+		margin:  0 auto;
+		padding: 0px;
+	}
+
+	.rental-title{
+		font-weight: bold;
+		font-size: 2.9vw;
+		text-shadow: 3px 3px 10px white;
+	}
+
+	.rental-items{
+/*		background-color: bisque;*/
+		width: 90%;
+		padding-top: 30px;
+		margin:  0 auto;
+	}
+
+@media(min-width:280px){
+	.rental-items>dh{
+		font-size: 20px;
+	}
+}
+@media(min-width:1100px){
+	.rental-items>dh{
+		font-size: 30px;
+	}
+}
+	.rental-about{
+/*		background-color: rgba(161,226,171,0.30);*/
+		display: flex;
+		border-bottom: rgba(0,0,0,0.50) solid 2px;
+		width:90%;
+		margin: 0 auto;
+		padding: 0 10px;
+		text-align: center;
+		font-weight: bold;
+	}
+	.rental-about>p{
+/*		background-color: blue;*/
+		width: 90%;
+		padding: 15px 0px 0px 0;
+		margin: 0 auto;
+		font-size: 0.8rem;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, "serif";
+		font-weight: bold;
+	}
+
+}
+
+@media(min-width:1100px){
+		.rental{
+	/*	background-color: rgba(105,180,115,0.440);*/
+		text-align: center;
+		width: 100%;
+		color: rgba(0,0,0,1.00);
+		margin:  0 auto;
+	}
+
+	.rental-box{
+	/*	background-color: brown;*/
+		display: flex;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.rental-containar1, .rental-containar2{
+	/*	background-color: bisque;*/
+		padding: 0px;
+		margin:  0 auto;
+		flex: 1;
+	}
+
+	.rental-title{
+		font-weight: bold;
+		font-size: 2.9vw;
+		text-shadow: 3px 3px 10px white;
+	}
+
+	.rental-items{
+		padding-top: 30px;
+	}
+
+	.rental-items>dh{
+		font-size: 1.5rem;
+	}
+
+	.rental-about{
+/*		background-color: rgba(161,226,171,0.30);*/
+		display: flex;
+		border-bottom: rgba(0,0,0,0.50) solid 2px;
+		width:30vw;
+		margin: 0 auto;
+		padding: 0 10px;
+		text-align: center;
+		font-weight: bold;
+	}
+	.rental-about>p{
+/*		background-color: aqua;*/
+		width: 30vw;
+		padding: 15px 0px 0px 0;
+		margin: 0 auto;
+		font-size: 1.1rem;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, "serif";
+		font-weight: bold;
+	}
+
+}
+
+
+/*フードメニュー*/
+
+.main-head3{
+/*		background-color: aqua;*/
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 0 100px 0;
+}
+
+
+
+.food-containar{
+/*	background-color: rgba(33,160,160,0.40);*/
+	text-align: center;
+	width: 100%;
+	padding: 50px 0 0 0;
+	margin:  0 auto;
+}
+
+.food-containar>h2{
+	margin: 0;
+	padding:  0 0 10px 0;
+}
+
+.drink-about{
+/*	background-color: rgba(33,91,42,1.00);*/
+	display: flex;
+	border-bottom: rgba(0,0,0,1.00) solid 2px;
+	width:350px;
+	margin: 0 auto;
+}
+
+
+.drink-about>p{
+/*	background-color: aquamarine;*/
+	flex: 1;
+	width: 100%;
+	padding: 5px 30px;
+	margin: 0;
+}
+
+dd{
+/*	background-color: rgba(0,55,206,1.00);*/
+	width: 100%;
+	margin:  0 auto;
+}
+
+dh{
+	font-size: 20px;	
+}
+
+@media(min-width:280px){
+
+	.main-head3-comment{
+	/*	background-color: rgba(0,55,206,1.00);*/
+		margin:  0 auto;
+		padding-top: 0px;
+		width: 100%;
+	}
+	
+	.Access{
+		font-size: 3.5vw;
+	}
+	
+}
+@media(min-width:1100px){
+	.main-head3-comment{
+	/*	background-color: rgba(0,55,206,1.00);*/
+		margin:  0 auto;
+		padding-top: 0px;
+		display: flex;
+		width: 100%;
+	}
+	
+	.food-name{
+	/*	background-color: rgba(33,160,160,0.40);*/
+		flex: 3;
+	}
+
+	.price{
+	/*	background-color: rgba(33,16,160,0.40);*/
+		flex: 1;
+	}
+}
+
+
+/*インフォメーション*/
+
+.main-head4{
+/*	background-color: aquamarine;*/
+	padding: 180px 0 0 0;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.iii{
+	width: 100%;
+	mar
+}
+
+.main-head4-comment{
+/*	background-color: rgba(39,112,3,0.10);*/
+	border-radius: 10%;
+	width:60vw;
+	height: 90vh;
+	overflow-y: scroll;
+	scrollbar-color: green;
+	margin: 0 auto;
+}
+.news {
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+	text-align: center;
+	font-size: 30px;
+}
+.news-topicks {
+/*	background-color: rgba(63,97,166,1.00);*/
+	margin: 0 auto;
+	padding: 0px 0 0 0;
+	width: 100%;
+	height: 150px;
+	text-align: center;
+}
+
+@media(min-width:280px){
+	.news-feed, .news{
+		font-size: 25px;
+	}
+}
+@media(min-width:1100px){
+	.news-feed, .news{
+		font-size: 30px;
+	}
+}
+
+.topicks-containar {
+/*	background-color: rgba(63,97,16,1.00);*/
+	width: 270px;
+	height: 150px;
+	margin: 0px auto;
+	text-align: left;
+	overflow-y: auto;
+}
+
+.blog-containar{
+	text-align: center;
+	padding: 20px 0;
+	width: 55vw;
+	margin:  0 auto;
+}
+
+.blog-containar>p,h2{
+	line-height: 20px;
+}
+
+.blog-comment{
+	display: flex;
+	width: 50vw;
+}
+
+.blog-comment>img{
+/*	background-color: aquamarine;*/
+	border-radius: 10px;
+	width:40%;
+	flex: 1;
+	margin-left: 0px;
+}
+.blog-comment>p{
+	flex:1;
+	text-align: left;
+	padding-left: 10px;
+}
+
+
+/*アクセス・予約*/
+.main-head5 {
+	width: 50vw;
+	margin:  0 auto;
+	padding-top:　200px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, "serif";
+}
+
+.main-head6 {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, "serif";
+	padding-top: 20px;
+	width: 50vw;
+	margin: 0 auto;
+}
+
+.reserve{
+	width: 200px;
+	background-color: rgba(125,162,92,0.20);
+	margin: 10px auto 30px auto;
+}
+.main-head4>h2 {
+	width: 850px;
+	margin: 0 auto;
+}
+
+
+
+.main-head6-title {
+	width: 70vw;
+	margin:  0 auto;
+	line-height: 20px;
+	padding-bottom: 120px;
+}
+@media(min-width:280px){
+	.Access{
+		font-size: 25px;
+	}
+	.Reserve{
+		font-size: 25px;
+	}
+	.main-head6-title>p {
+			font-size: 15px;
+	}
+}
+@media(min-width:1100px){
+	.Access{
+		font-size: 35px;
+	}
+	.Reserve{
+		font-size: 35px;
+	}
+	.main-head6-title>p {
+			font-size: 20px;
+	}
+}
